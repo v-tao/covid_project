@@ -25,7 +25,18 @@ import numpy as np
 # df = pd.merge(df, percentUrban)
 
 ###### MASK DATA ######
-#STATES DONE: ALL STATES DONE
+# STATES DONE: ALL STATES DONE
 # df.loc[((df["state"]=="WI") & (df["date"] >= "2020-08-01")), "statewideMaskMandate"] = 1
 
+
+###### GRAPH ######
+# df = df[df["state"] == "AR"]
+# plt.plot(np.linspace(0, df.shape[0]+1, df.shape[0]), df["totalTestResultsIncrease"])
+# plt.show()
+
+###### MEDIAN INCOME ADJUSTED FOR COST OF LIVING BY STATE ######
+# STATES DONE: ALL STATES DONE
+# df.loc[(df["state"]=="WY"), "adjustedMedianIncome"] = 60458
+
+df = pd.read_csv("covid-data.csv")
 # df.to_csv("covid-data.csv", encoding='utf-8', index=False)
